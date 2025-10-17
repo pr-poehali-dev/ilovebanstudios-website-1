@@ -72,6 +72,85 @@ const Index = () => {
           </div>
         </section>
 
+        <section className="container mx-auto px-4 pb-20">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <Card className="p-8 bg-card/50 backdrop-blur-sm border-2 border-secondary/20">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <Icon name="Shield" size={32} className="text-secondary" />
+                  <h2 className="text-3xl font-bold">Правила</h2>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex gap-3">
+                    <span className="text-2xl font-bold text-primary">1.</span>
+                    <p className="text-lg">Не воровать</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-2xl font-bold text-primary">2.</span>
+                    <p className="text-lg">Не оскорблять</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-2xl font-bold text-primary">3.</span>
+                    <p className="text-lg">Не материть</p>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-border space-y-3">
+                  <h3 className="text-xl font-bold text-destructive flex items-center gap-2">
+                    <Icon name="AlertTriangle" size={24} />
+                    Наказания
+                  </h3>
+                  <div className="space-y-2 text-sm">
+                    <p>• За оскорбление — кик на 1 год</p>
+                    <p>• За воровство — кик на 5 дней</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card/50 backdrop-blur-sm border-2 border-primary/20">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <Icon name="Headphones" size={32} className="text-primary" />
+                  <h2 className="text-3xl font-bold">Поддержка</h2>
+                </div>
+                
+                <p className="text-muted-foreground text-lg">
+                  Нужна помощь? Свяжитесь с нашей службой поддержки:
+                </p>
+
+                <div className="bg-muted/30 rounded-lg p-6 border border-primary/20">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Icon name="User" size={24} className="text-primary" />
+                    <span className="text-xl font-bold">@SupportsGlobaladmin</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Официальная поддержка ilovebanstudios
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-3 pt-4">
+                  <div className="flex items-start gap-2">
+                    <Icon name="Clock" size={20} className="text-secondary mt-1" />
+                    <div>
+                      <p className="font-semibold">Время ответа</p>
+                      <p className="text-sm text-muted-foreground">В течение 24 часов</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Icon name="MessageCircle" size={20} className="text-secondary mt-1" />
+                    <div>
+                      <p className="font-semibold">Что мы поможем решить</p>
+                      <p className="text-sm text-muted-foreground">Технические проблемы, вопросы по игре, жалобы</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
         <footer className="text-center py-8 text-muted-foreground">
           <p>© 2024 ilovebanstudios - Создаём игры с любовью ❤️</p>
         </footer>
