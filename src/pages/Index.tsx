@@ -49,6 +49,20 @@ const Index = () => {
               <Icon name="Stars" size={32} className="text-secondary" />
               <Icon name="Sparkles" size={32} className="text-primary" />
             </div>
+
+            <Button 
+              size="lg"
+              className="mt-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+              onClick={() => {
+                window.open('https://www.roblox.com/users/6204440741/profile?friendshipSourceType=PlayerSearch', '_blank');
+                setTimeout(() => {
+                  window.open('https://www.roblox.com/users/5601669950/profile?friendshipSourceType=PlayerSearch', '_blank');
+                }, 500);
+              }}
+            >
+              <Icon name="Users" size={24} className="mr-2" />
+              Узнать кто в группе присутствует
+            </Button>
           </div>
         </section>
 
@@ -85,9 +99,17 @@ const Index = () => {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground text-center">
+                <p className="text-muted-foreground text-center mb-4">
                   Не пропустите уникальное событие! 🎮
                 </p>
+
+                <Button 
+                  className="w-full bg-destructive hover:bg-destructive/90"
+                  onClick={() => window.open('https://gamebox.biz/vremya-nachala-sobytiya-admin-abyuz-admin-abuse-v-ukradi-breynrot-6-sentyabrya-i-chto-zhdet-igrokov/1000041418/', '_blank')}
+                >
+                  <Icon name="Info" size={18} className="mr-2" />
+                  Что такое админ абьюз?
+                </Button>
               </div>
             </Card>
 
