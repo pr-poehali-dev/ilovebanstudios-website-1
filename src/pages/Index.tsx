@@ -1,8 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useState, useEffect } from "react";
 
 const Index = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 4,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+        } else if (prev.hours > 0) {
+          return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        }
+        return prev;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen stars-bg relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-background to-background"></div>
@@ -25,6 +49,71 @@ const Index = () => {
               <Icon name="Stars" size={32} className="text-secondary" />
               <Icon name="Sparkles" size={32} className="text-primary" />
             </div>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 pb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            🔥 Новости
+          </h2>
+          
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 mb-20">
+            <Card className="p-6 bg-gradient-to-br from-destructive/20 to-destructive/5 backdrop-blur-sm border-2 border-destructive/50 animate-pulse">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Icon name="Zap" size={32} className="text-destructive" />
+                  <h3 className="text-2xl font-bold text-destructive">АДМИН АБЬЮЗ СЕГОДНЯ!</h3>
+                </div>
+                
+                <div className="bg-background/50 rounded-lg p-6 text-center">
+                  <p className="text-sm text-muted-foreground mb-3">До начала осталось:</p>
+                  <div className="flex justify-center gap-4">
+                    <div className="flex flex-col items-center">
+                      <span className="text-4xl font-black text-destructive">{String(timeLeft.hours).padStart(2, '0')}</span>
+                      <span className="text-xs text-muted-foreground">часов</span>
+                    </div>
+                    <span className="text-4xl font-black text-destructive">:</span>
+                    <div className="flex flex-col items-center">
+                      <span className="text-4xl font-black text-destructive">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                      <span className="text-xs text-muted-foreground">минут</span>
+                    </div>
+                    <span className="text-4xl font-black text-destructive">:</span>
+                    <div className="flex flex-col items-center">
+                      <span className="text-4xl font-black text-destructive">{String(timeLeft.seconds).padStart(2, '0')}</span>
+                      <span className="text-xs text-muted-foreground">секунд</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground text-center">
+                  Не пропустите уникальное событие! 🎮
+                </p>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-primary/20">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Icon name="Newspaper" size={32} className="text-primary" />
+                  <h3 className="text-2xl font-bold">Новая игра в разработке</h3>
+                </div>
+                
+                <div className="bg-muted/30 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Icon name="Calendar" size={20} className="text-secondary" />
+                    <span className="font-bold text-lg">Релиз: 5 ноября</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Мы работаем над чем-то невероятным! Следите за обновлениями.
+                  </p>
+                </div>
+
+                <p className="text-muted-foreground flex items-center gap-2">
+                  <Icon name="Sparkles" size={18} />
+                  Готовьтесь к новым приключениям!
+                </p>
+              </div>
+            </Card>
           </div>
         </section>
 
@@ -109,7 +198,10 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-2 border-primary/20">
+            <Card 
+              className="p-8 bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/40 transition-all cursor-pointer"
+              onClick={() => window.open('https://support.google.com/a/answer/1047213?hl=ru', '_blank')}
+            >
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <Icon name="Headphones" size={32} className="text-primary" />
@@ -145,6 +237,13 @@ const Index = () => {
                       <p className="text-sm text-muted-foreground">Технические проблемы, вопросы по игре, жалобы</p>
                     </div>
                   </div>
+                </div>
+
+                <div className="pt-4 border-t border-border">
+                  <Button className="w-full" variant="outline">
+                    <Icon name="ExternalLink" size={18} className="mr-2" />
+                    Открыть поддержку
+                  </Button>
                 </div>
               </div>
             </Card>
