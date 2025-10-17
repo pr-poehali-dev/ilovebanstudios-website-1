@@ -170,14 +170,72 @@ const Index = () => {
                   Погрузитесь в захватывающий мир приключений! Исследуйте, сражайтесь и побеждайте в этой уникальной игре.
                 </p>
                 
-                <Button 
-                  size="lg"
-                  className="w-full text-lg font-bold bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
-                  onClick={() => window.open('https://www.roblox.com/users/8656342223/profile?friendshipSourceType=PlayerSearch#!#creations', '_blank')}
-                >
-                  <Icon name="Play" size={24} className="mr-2" />
-                  Зайти в игру
-                </Button>
+                <div className="flex gap-3">
+                  <Button 
+                    size="lg"
+                    className="flex-1 text-lg font-bold bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+                    onClick={() => window.open('https://www.roblox.com/users/8656342223/profile?friendshipSourceType=PlayerSearch#!#creations', '_blank')}
+                  >
+                    <Icon name="Play" size={24} className="mr-2" />
+                    Зайти в игру
+                  </Button>
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="flex-1 text-lg font-bold border-primary/50 hover:bg-primary/10"
+                    onClick={() => window.open('https://ilovebanstudios-website--preview.poehali.dev/', '_blank')}
+                  >
+                    <Icon name="Globe" size={24} className="mr-2" />
+                    Наш 1 сайт
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 pb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            📸 Галерея Steal a Brainrot
+          </h2>
+          
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="relative aspect-square overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/a3d60111-7250-42f1-9c4f-dcffd472da30.png" 
+                  alt="Скриншот 1"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-sm text-muted-foreground">Главное меню игры</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="relative aspect-square overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/3af92626-04b6-4ba9-b8b0-06a4c0a22a46.jpg" 
+                  alt="Скриншот 2"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-sm text-muted-foreground">Игровой процесс</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="relative aspect-square overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/73ac055d-8fe4-4127-9306-30021750ce4d.jpg" 
+                  alt="Скриншот 3"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-sm text-muted-foreground">Персонажи</p>
               </div>
             </Card>
           </div>
