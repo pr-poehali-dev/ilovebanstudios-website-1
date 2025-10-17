@@ -34,8 +34,17 @@ const Index = () => {
           </h2>
           
           <div className="max-w-2xl mx-auto">
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-              <div className="space-y-6">
+            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/a3d60111-7250-42f1-9c4f-dcffd472da30.png" 
+                  alt="Steal a Brainrot"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
+              </div>
+              
+              <div className="p-8 space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                     <Icon name="Gamepad2" size={32} className="text-white" />
