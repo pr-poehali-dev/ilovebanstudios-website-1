@@ -216,7 +216,7 @@ const Index = () => {
             <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
               <div className="relative aspect-square overflow-hidden">
                 <img 
-                  src="https://cdn.poehali.dev/files/3af92626-04b6-4ba9-b8b0-06a4c0a22a46.jpg" 
+                  src="https://cdn.poehali.dev/files/0f1b8f54-9a9e-4786-addb-51086850a45a.jpg" 
                   alt="Скриншот 2"
                   className="w-full h-full object-cover"
                 />
@@ -236,6 +236,32 @@ const Index = () => {
               </div>
               <div className="p-4 text-center">
                 <p className="text-sm text-muted-foreground">Персонажи</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="relative aspect-square overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/3af92626-04b6-4ba9-b8b0-06a4c0a22a46.jpg" 
+                  alt="Скриншот 4"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-sm text-muted-foreground">Чат в игре</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="relative aspect-square overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/457c018e-1dc4-4288-8c2d-9c2c701e4219.jpg" 
+                  alt="Скриншот 5"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-sm text-muted-foreground">Игровые материалы</p>
               </div>
             </Card>
           </div>
